@@ -1,10 +1,9 @@
 .titolo {
     text-align: center;
-    background-color: rgb(171, 122, 130);
 }
 .container {
-    min-height: 600px;
-    border: solid;
+    min-height: 800px;
+    width: 1000PX;
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
@@ -16,4 +15,12 @@
     width: 266px;
     text-align: center;
     background-color: pink;
+    border: 1px solid;
+    border-radius: 15px;
+}
+.ss {
+    width: 80%;
+    height: 3px;
+    color: black;
+    background-color: black;
 }
