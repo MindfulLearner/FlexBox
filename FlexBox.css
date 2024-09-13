@@ -1,19 +1,39 @@
+
+/* ottimo lavoro!!! */
+
+/* serve per resettare i margini padding e boxsizing, se fai una ricerca di questi ti daratnno piu informazioni*/
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+/* questo serve per centrare le cose proprio contenitori interi */
+.centered {
+    margin: 0 auto;
+    width: 1000px;
+}
+
 .titolo {
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .container {
     min-height: 800px;
-    width: 1000PX;
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    /* grid template non serve puoi toglierlo*/
     grid-template-columns: repeat(12, 1fr);
 }
 .box {
+    padding-top: 20px;
     height: 150px;
-    width: 266px;
+    /*  qui usato calc si riferisce al contenitore padre 100% che e' container, centered e' 1000px quindi il 100% e' 1000px*/
+    /* - 60px perche il gap e' di 30px deve essere contato logicamente nel calcolo!! prova a togliere 60px e vedere cosa succede e prova anche a togliere solo gap evedere che  succede*/ 
+    width: calc((100% / 3) - 60px);
     text-align: center;
     background-color: pink;
     border: 1px solid;
@@ -25,7 +45,9 @@
     color: black;
     background-color: black;
 }
-.tt {
+
+/* puoi specificare di piu tramite questi modi di scrivere > etc.. perche se per esempio non vuoi che una certa classe venga influenza questo e' un modo per aggiungere specificita di che cosa stai intendo, potrebbe capire di avere un box al di fuori di questo container quindi e' importante che tu indichi solo quelol che tu vuoi indicare*/
+.box > .tt {
     width: 80%;
     height: 2px;
     background-color: black;
